@@ -5,7 +5,7 @@ import { Application } from "../core";
 import { Provider } from "../utils/provider";
 
 @Component
-export class Three extends Vue {
+export class VThree extends Vue {
   @Prop({ default: true, type: Boolean })
   public active!: boolean;
 

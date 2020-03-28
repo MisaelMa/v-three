@@ -1,6 +1,6 @@
 export * from "./Scene";
-export * from "./Three";
-export * from "./Renderer";
+export * from "./VThree";
+export * from "./VRenderer";
 export * from "./AssetBundle";
 
 export * from "./entities";
