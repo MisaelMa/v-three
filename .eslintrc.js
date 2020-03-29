@@ -7,8 +7,6 @@ module.exports = {
         'plugin:vue/essential',
         'eslint:recommended',
         '@vue/typescript/recommended',
-        '@vue/prettier',
-        '@vue/prettier/@typescript-eslint'
     ],
     parserOptions: {
         ecmaVersion: 2020
@@ -42,6 +40,7 @@ module.exports = {
             }
         ],
         '@typescript-eslint/indent': 'off',
+        'no-mixed-spaces-and-tabs': 'off',
         'no-unused-vars': 'off',
         'node/no-unsupported-features/es-syntax': 'off',
         '@typescript-eslint/ban-ts-ignore': 'off',

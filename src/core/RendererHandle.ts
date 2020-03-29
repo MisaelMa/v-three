@@ -6,6 +6,7 @@ import { CameraHandle } from "./CameraHandle";
 import { EventDispatcher } from "./EventDispatcher";
 import { Handle } from "./Handle";
 import { SceneHandle } from "./SceneHandle";
+import { CSS3DRenderer } from 'three/examples/jsm/renderers/CSS3DRenderer';
 
 type OnChangeScene = (name: string, scene?: SceneHandle) => Promise<void>;
 type OnChangeCamera = (name: string, camera?: CameraHandle) => Promise<void>;
@@ -28,7 +29,7 @@ export class RendererHandle extends Handle {
 
   private _changeQueue = Promise.resolve();
 
-  private _renderer?: Renderer;
+  private _renderer?: Renderer | CSS3DRenderer;
 
   public get scene() {
     return this._scene;
@@ -54,7 +55,7 @@ export class RendererHandle extends Handle {
 
   public render = () => {};
 
-  public set(renderer?: Renderer) {
+  public set(renderer?: Renderer | CSS3DRenderer ) {
     if (this._renderer === renderer) {
       return;
     }

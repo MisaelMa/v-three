@@ -1,13 +1,18 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png"/>
-  </div>
+    <div id="app">
+      <Samples/>
+    </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+    import { Component, Vue } from 'vue-property-decorator';
+    import Samples from '@/Samples/Samples.vue';
 
-@Component
-export default class App extends Vue {
-}
+    @Component({
+        components: {
+            Samples
+        }
+    })
+    export default class App extends Vue {
+    }
 </script>

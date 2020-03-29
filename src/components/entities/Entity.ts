@@ -34,7 +34,7 @@ export class Entity extends Mixins(ObjectComponent) {
 
     this.m_object = await this.instantiate(this.app);
     const parent = this.object ? this.object : scene;
-    // this.m_object)
+    console.log(this.m_object)
     parent!.add(this.m_object);
     Provider.setValue<ObjectType>(this.provideObject, this.m_object);
     this.m_created = true;
